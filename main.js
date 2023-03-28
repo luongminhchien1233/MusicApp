@@ -302,8 +302,15 @@ const app = {
     },
 
     loadconfig: function(){
-        this.isRandom = this.config.isRandom;
-        this.isRepeatable = this.config.isRepeat;
+        if(this.config.isRandom){
+            this.isRandom = this.config.isRandom;
+        }
+        else{
+            this.isRandom = false;
+        }
+        if(this.config.isRepeat){
+            this.isRepeat = this.config.isRepeat;
+        }
         if(this.config.currentIndex){
             this.currentIndex = this.config.currentIndex;
         }
